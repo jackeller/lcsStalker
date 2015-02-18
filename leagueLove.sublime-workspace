@@ -484,10 +484,17 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/kellerj1/leagueLove"
+		"/Users/kellerj1/leagueLove",
+		"/Users/kellerj1/leagueLove/src",
+		"/Users/kellerj1/leagueLove/src/app",
+		"/Users/kellerj1/leagueLove/src/app/main",
+		"/Users/kellerj1/leagueLove/src/assets",
+		"/Users/kellerj1/leagueLove/src/components"
 	],
 	"file_history":
 	[
+		"/Users/kellerj1/leagueLove/README.md",
+		"/Users/kellerj1/leagueLove/src/index.html",
 		"/Users/kellerj1/leagueLove/Gruntfile.js",
 		"/Users/kellerj1/Desktop/todo.html",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/app/templates/productdetail/partials/prices.html",
@@ -613,9 +620,7 @@
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/js/tealiumConstructor.js",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/tealeaf/TeaLeafTarget.jsp",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/js/tellafriend_ajax.js",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/content/gateway/de/WOMENS-TOPS-EU.html",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/taglib_include.jspf",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/app/templates/productdetail/partials/action_buttons.html"
+		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/content/gateway/de/WOMENS-TOPS-EU.html"
 	],
 	"find":
 	{
