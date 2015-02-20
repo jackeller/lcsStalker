@@ -3,7 +3,7 @@
 describe('controllers', function(){
   var scope;
 
-  beforeEach(module('leagueLove'));
+  beforeEach(module('lcsStalker'));
 
   beforeEach(inject(function($rootScope) {
     scope = $rootScope.$new();

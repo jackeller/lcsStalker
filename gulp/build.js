@@ -19,7 +19,7 @@ gulp.task('partials', function () {
       quotes: true
     }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'leagueLove'
+      module: 'lcsStalker'
     }))
     .pipe(gulp.dest(paths.tmp + '/partials/'));
 });

@@ -1,37 +1,51 @@
 'use strict';
 
-angular.module('leagueLove', [
-
-])
-    .service('leagueLoveModel', function ($http) {
-        var model = this,
-            URLS = {
-                FETCH: 'data/categories.json'
-            },
-            categories;
-
-        function extract(result) {
-            return result.data;
-        }
-
-        function cacheCategories(result) {
-            categories = extract(result);
-            return categories;
-        }
-
-        model.getCategories = function() {
-            return $http.get(URLS.FETCH).then(cacheCategories);
-        }
-    })
-
-angular.module('leagueLove')
+angular.module('lcsStalker')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = getCategories().then
+        $scope.hello = "world";
 
-    CategoriesModel.getCategories()
-      .then(function(result){
-          categoriesListCtrl.categories = result;
-      });
+        $scope.teams = [
+            { "id" : 0, "name": "TSM" }
+            { "id" : 1, "name": "C9" }
+            { "id" : 2, "name": "CRS" }
+            { "id" : 3, "name": "DIG" }
+        ];
+
+        
+  })
+;
+
+// angular.module('lcsStalker', [
+
+// ])
+//     .service('lcsStalkerModel', function ($http) {
+//         var model = this,
+//             URLS = {
+//                 FETCH: 'data/categories.json'
+//             },
+//             categories;
+
+//         function extract(result) {
+//             return result.data;
+//         }
+
+//         function cacheCategories(result) {
+//             categories = extract(result);
+//             return categories;
+//         }
+
+//         model.getCategories = function() {
+//             return $http.get(URLS.FETCH).then(cacheCategories);
+//         }
+//     })
+
+
+    // $scope.awesomeThings = getCategories().then
+
+    // CategoriesModel.getCategories()
+    //   .then(function(result){
+    //       categoriesListCtrl.categories = result;
+    //   });
     // $scope.awesomeThings = [
     //   {
     //     'title': 'AngularJS',
@@ -88,7 +102,7 @@ angular.module('leagueLove')
     //     'logo': 'node-sass.png'
     //   }
     // ];
-    angular.forEach($scope.awesomeThings, function(awesomeThing) {
-      awesomeThing.rank = Math.random();
-    });
-  });
+    // angular.forEach($scope.awesomeThings, function(awesomeThing) {
+    //   awesomeThing.rank = Math.random();
+    // });
+

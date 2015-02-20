@@ -1,4 +1,4 @@
-# leagueLove
+# lcsStalker
 Hit up League of Legends API.  Do some stuff with it.
 
 #Feature List
