@@ -2,18 +2,34 @@
 
 angular.module('lcsStalker')
   .controller('MainCtrl', function ($scope) {
-        $scope.hello = "world";
 
         $scope.teams = [
-            { "id" : 0, "name": "TSM" }
-            { "id" : 1, "name": "C9" }
-            { "id" : 2, "name": "CRS" }
+            { "id" : 0, "name": "TSM" },
+            { "id" : 1, "name": "C9" },
+            { "id" : 2, "name": "CLG" },
             { "id" : 3, "name": "DIG" }
         ];
 
-        
-  })
-;
+        $scope.players = [
+            { "id": 0, "name": "Marcus 'Dyrus' Hill", "team": "TSM" },
+            { "id": 1, "name": "Søren 'Bjergsen' Bjerg", "team": "TSM" },
+            { "id": 2, "name": "Darshan 'Zion Spartan' Upadhyaya", "team": "CLG" },
+            { "id": 3, "name": "Alan 'KiWiKiD' Nguyen", "team": "DIG" }
+        ];
+
+        $scope.currentTeam = null;
+
+        function setCurrentTeam(team) {
+            $scope.currentTeam = team;
+        }
+
+        function isCurrentTeam(team) {
+            return $scope.currentTeam !== null && team.name === $scope.currentTeam.name;
+        }
+
+        $scope.setCurrentTeam = setCurrentTeam;
+        $scope.isCurrentTeam = isCurrentTeam;
+  });
 
 // angular.module('lcsStalker', [
 

@@ -1,9 +1,38 @@
 <div class="container">
 
-<h1>
-  {{hello}}
-</h1>
-<!-- 
+    <div class="row">
+        <div class="large-12 large-text-center columns">
+            <a href ng-click="setCurrentTeam()">
+              <img src="assets/images/logo.png" alt="logo">
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="large-4 columns">
+            <ul>
+                <li
+                  ng-repeat="team in teams"
+                  ng-class="{ 'active' : isCurrentTeam(team) }">
+                    <a href ng-click="setCurrentTeam(team)">{{team.name}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="large-8 columns">
+
+            <ul>
+                <li ng-repeat="player in players | filter: team = currentTeam.name">
+                    <p>{{player.id}} - {{player.name}} - {{player.team}}</p>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!--
   <div ng-include="'components/navbar/navbar.html'"></div>
 
   <div class="row">
