@@ -251,13 +251,41 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/app/main/main.controller.js",
+			"settings":
+			{
+				"buffer_size": 3913,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/main/main.html",
+			"settings":
+			{
+				"buffer_size": 1956,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/index.scss",
+			"settings":
+			{
+				"buffer_size": 256,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/JSLint/JSLint.sublime-build",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 269.0,
 		"selected_items":
 		[
+			[
+				"prett",
+				"HTMLPrettify"
+			],
 			[
 				"syntax javascip",
 				"Set Syntax: JavaScript"
@@ -272,10 +300,6 @@
 			],
 			[
 				"htmlpr",
-				"HTMLPrettify"
-			],
-			[
-				"prett",
 				"HTMLPrettify"
 			],
 			[
@@ -463,7 +487,7 @@
 				"View: Toggle Open Files in Side Bar"
 			]
 		],
-		"width": 516.0
+		"width": 561.0
 	},
 	"console":
 	{
@@ -485,16 +509,29 @@
 	"expanded_folders":
 	[
 		"/Users/kellerj1/leagueLove",
+		"/Users/kellerj1/leagueLove/gulp",
 		"/Users/kellerj1/leagueLove/src",
 		"/Users/kellerj1/leagueLove/src/app",
 		"/Users/kellerj1/leagueLove/src/app/main"
 	],
 	"file_history":
 	[
+		"/Users/kellerj1/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/kellerj1/leagueLove/src/app/main/main.html",
 		"/Users/kellerj1/leagueLove/src/app/main/main.controller.spec.js",
-		"/Users/kellerj1/leagueLove/src/app/main/main.controller.js",
-		"/Users/kellerj1/leagueLove/README.md",
 		"/Users/kellerj1/leagueLove/src/index.html",
+		"/Users/kellerj1/leagueLove/gulp/build.js",
+		"/Users/kellerj1/leagueLove/dist/scripts/app-35a486a5.js",
+		"/Users/kellerj1/leagueLove/dist/index.html",
+		"/Users/kellerj1/leagueLove/.tmp/serve/index.html",
+		"/Users/kellerj1/leagueLove/.tmp/partials/templateCacheHtml.js",
+		"/Users/kellerj1/leagueLove/README.md",
+		"/Users/kellerj1/leagueLove/package.json",
+		"/Users/kellerj1/leagueLove/bower.json",
+		"/Users/kellerj1/leagueLove/src/app/index.js",
+		"/Users/kellerj1/leagueLove/src/app/main/main.controller.js",
+		"/Users/kellerj1/leagueLove/src/components/navbar/navbar.controller.js",
+		"/Users/kellerj1/leagueLove/gulpfile.js",
 		"/Users/kellerj1/leagueLove/Gruntfile.js",
 		"/Users/kellerj1/Desktop/todo.html",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/app/templates/productdetail/partials/prices.html",
@@ -549,7 +586,6 @@
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/html/de/help/sizechart.html",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/src/css/modules/_curalate.scss",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/app/templates/global/partials/headerUtility.html",
-		"/Users/kellerj1/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/src/css/modules/_pdp-media.scss",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/src/css/modules/_pdp-mobile.scss",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/app/templates/global/productDetail.html",
@@ -607,18 +643,7 @@
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/on/login_form_all_new.jsp",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/common/shopping_cart_item_count.jsp",
 		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/user/site_preference.jsp",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/uo_sitemap.jsp",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/content/gateway/de/MENS-VINTAGE-SHIRTS-EU.html",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/app/src/modules/productDetail/directives/mini-image-switcher.js",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/m/user/order_status_include_item_tracking.jsp",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/app/src/modules/sizechart/factories/sizechartGetters.js",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/staticpage.jsp",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/m/vendors/tealium.jsp",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/m/checkout/app_checkout.jsp",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/content/gateway/urban/APARTMENT.html",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/add_atg_proxy.jsp",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/js/tealiumConstructor.js",
-		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/tealeaf/TeaLeafTarget.jsp"
+		"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/uo_sitemap.jsp"
 	],
 	"find":
 	{
@@ -629,6 +654,7 @@
 		"height": 95.0,
 		"where_history":
 		[
+			"",
 			"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war",
 			"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/js/catalog",
 			"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/js",
@@ -755,8 +781,7 @@
 			"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear",
 			"/Users/kellerj1/s98blogweb",
 			"/Applications/MAMP/htdocs",
-			"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/",
-			"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/css"
+			"/Users/kellerj1/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/Web.war/"
 		]
 	},
 	"find_state":
@@ -764,6 +789,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"CurrentCategory",
+			"currentCategory",
+			"ul",
+			"}",
+			"\"",
+			"leagueLove",
 			"colors')",
 			"line-height: 20px",
 			"cross-sell",
@@ -880,18 +916,7 @@
 			"<img src=\"https://www.urbanoutfitters.com/images/marketing/interstitial-page/mobile/_2.jpg\">",
 			"cart.open",
 			"mini-cart",
-			"utilitynavdropdown",
-			"headerUtility",
-			"mini-cart",
-			"#mini-cart",
-			"#mini-car5",
-			"#mini-card",
-			"product-view-more",
-			".dropdowner",
-			".action-buttons",
-			".product-details",
-			".action-buttons",
-			".pdp-content"
+			"utilitynavdropdown"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -899,6 +924,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"lcsStalker",
 			"yay",
 			".header-promo-m",
 			"class=\"header-promo-m",
@@ -970,8 +996,99 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/app/main/main.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3913,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								854,
+								854
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/app/main/main.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								625,
+								625
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/app/index.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1029,6 +1146,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"gulpfile",
+				"gulpfile.js"
+			],
 			[
 				"product-detail",
 				"app/templates/productdetail/product-detail.html"
@@ -1442,10 +1563,6 @@
 				"src/css/modules/_footer.scss"
 			],
 			[
-				"gulpfile",
-				"gulpfile.js"
-			],
-			[
 				"headercontent",
 				"common/header-content.jsp"
 			],
@@ -1551,7 +1668,7 @@
 		[
 			[
 				"",
-				"~/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/webwar.sublime-project"
+				"~/jboss/jboss-eap-5.1/jboss-as/server/urban-store/deploy/urban.ear/webwar.sublime-workspace"
 			],
 			[
 				"blog",
