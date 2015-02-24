@@ -1,7 +1,8 @@
 # LCS Stalker
+
 Hit up League of Legends API.  Do some stuff with it.
 
-#Feature List
+## Feature List
 
 ## To Do
 - Gather info based on team name
