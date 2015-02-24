@@ -1,98 +1,123 @@
 'use strict';
 
 angular.module('lcsStalker')
-    .controller('MainCtrl', function($scope) {
+.controller('MainCtrl', function($scope) {
 
-        $scope.teams = [{
-            "id": 0,
-            "name": "TSM"
-        }, {
-            "id": 1,
-            "name": "C9"
-        }, {
-            "id": 2,
-            "name": "CLG"
-        }, {
-            "id": 3,
-            "name": "DIG"
-        }];
+    $scope.teams = [{
+        "id": 0,
+        "name": "TSM"
+    }, {
+        "id": 1,
+        "name": "C9"
+    }, {
+        "id": 2,
+        "name": "CLG"
+    }, {
+        "id": 3,
+        "name": "DIG"
+    }];
 
-        $scope.players = [{
-            "id": 0,
-            "name": "Marcus 'Dyrus' Hill",
-            "team": "TSM"
-        }, {
-            "id": 1,
-            "name": "Søren 'Bjergsen' Bjerg",
-            "team": "TSM"
-        }, {
-            "id": 2,
-            "name": "Darshan 'Zion Spartan' Upadhyaya",
-            "team": "CLG"
-        }, {
-            "id": 3,
-            "name": "Alan 'KiWiKiD' Nguyen",
-            "team": "DIG"
-        }];
+    $scope.players = [{
+        "id": 0,
+        "name": "Marcus 'Dyrus' Hill",
+        "team": "TSM"
+    }, {
+        "id": 1,
+        "name": "Søren 'Bjergsen' Bjerg",
+        "team": "TSM"
+    }, {
+        "id": 2,
+        "name": "Darshan 'Zion Spartan' Upadhyaya",
+        "team": "CLG"
+    }, {
+        "id": 3,
+        "name": "Alan 'KiWiKiD' Nguyen",
+        "team": "DIG"
+    }];
 
-        $scope.currentTeam = null;
+    $scope.currentTeam = null;
 
-        function setCurrentTeam(team) {
-            $scope.currentTeam = team || null;
+    function setCurrentTeam(team) {
+        $scope.currentTeam = team || null;
 
-            cancelCreating();
-            cancelEditing();
-        }
+        cancelCreating();
+        cancelEditing();
+    }
 
-        function isCurrentTeam(team) {
-            return $scope.currentTeam !== null && team.name === $scope.currentTeam.name;
-        }
+    function isCurrentTeam(team) {
+        return $scope.currentTeam !== null && team.name === $scope.currentTeam.name;
+    }
 
-        $scope.setCurrentTeam = setCurrentTeam;
-        $scope.isCurrentTeam = isCurrentTeam;
+    $scope.setCurrentTeam = setCurrentTeam;
+    $scope.isCurrentTeam = isCurrentTeam;
 
-        // -------------------
-        // Creating and Editing Players
-        // -------------------
+    // -------------------
+    // Creating and Editing Players
+    // -------------------
 
-        $scope.isCreating = false;
+    $scope.isCreating = false;
+    $scope.isEditing = false;
+
+    function startCreating() {
+        $scope.isCreating = true;
         $scope.isEditing = false;
 
-        function startCreating() {
-            $scope.isCreating = true;
-            $scope.isEditing = false;
+        resetCreateForm();
+    }
+
+    function cancelCreating() {
+        $scope.isCreating = false;
+    }
+
+    function shouldShowCreating() {
+        return $scope.currentTeam && !$scope.isEditing;
+    }
+
+    $scope.startCreating = startCreating;
+    $scope.cancelCreating = cancelCreating;
+    $scope.shouldShowCreating = shouldShowCreating;
+
+    function startEditing() {
+        $scope.isCreating = false;
+        $scope.isEditing = true;
+    }
+
+    function cancelEditing() {
+        $scope.isEditing = false;
+    }
+
+    function shouldShowEditing() {
+        return $scope.isEditing && !$scope.isCreating;
+    }
+
+    $scope.startEditing = startEditing;
+    $scope.cancelEditing = cancelEditing;
+    $scope.shouldShowEditing = shouldShowEditing;
+
+    ///////////////////////
+    //  CRUD             //
+    ///////////////////////
+
+    function resetCreateForm() {
+        $scope.newPlayer = {
+            player: '',
+            team: '',
+            currentTeam: $scope.currentTeam
         }
+    }
 
-        function cancelCreating() {
-            $scope.isCreating = false;
-        }
+    function createPlayer(player) {
+        player.id = $scope.players.length;
+        $scope.players.push( player );
 
-        function shouldShowCreating() {
-            return $scope.currentTeam && !$scope.isEditing;
-        }
+        resetCreateForm();
+    }
 
-        $scope.startCreating = startCreating;
-        $scope.cancelCreating = cancelCreating;
-        $scope.shouldShowCreating = shouldShowCreating;
+    $scope.createPlayer = createPlayer;
 
-        function startEditing() {
-            $scope.isCreating = false;
-            $scope.isEditing = true;
-        }
+});
 
-        function cancelEditing() {
-            $scope.isEditing = false;
-        }
 
-        function shouldShowEditing() {
-            return $scope.isEditing && !$scope.isCreating;
-        }
-
-        $scope.startEditing = startEditing;
-        $scope.cancelEditing = cancelEditing;
-        $scope.shouldShowEditing = shouldShowEditing;
-
-    });
 
 // angular.module('lcsStalker', [
 

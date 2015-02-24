@@ -1,11 +1,11 @@
 <div class="container">
 
     <div class="row">
-      <div class="large-12 large-text-center columns">
-        <div class="panel">
-          <h1>LCS Stalker</h1>
+        <div class="large-12 large-text-center columns">
+            <div class="panel">
+                <h1>LCS Stalker</h1>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="row">
@@ -17,9 +17,7 @@
                       All players
                     </a>
                 </li>
-                <li
-                  ng-repeat="team in teams"
-                  ng-class="{ 'active' : isCurrentTeam(team) }">
+                <li ng-repeat="team in teams" ng-class="{ 'active' : isCurrentTeam(team) }">
                     <a href ng-click="setCurrentTeam(team)">{{team.name}}</a>
                 </li>
             </ul>
@@ -30,28 +28,61 @@
             <ul>
                 <li ng-repeat="player in players | filter: team = currentTeam.name">
                     <p>
-                      {{player.id}} - {{player.name}} - {{player.team}} -
-                      <a href ng-click="startEditing()">Edit</a>
+                        {{player.id}} - {{player.name}} - {{player.team}} -
+                        <a href ng-click="startEditing()">Edit</a>
                     </p>
                 </li>
             </ul>
 
             <p ng-if="shouldShowCreating()">
-              <a href ng-click="startCreating()">Create Player</a>
+                <a href ng-click="startCreating()">Create Player</a>
             </p>
 
             <!-- Create a Player -->
             <div ng-if="isCreating">
-              Create a player content would go here
+                <form ng-submit="createPlayer(newPlayer)" novalidate>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <label for="newPlayerName">Player Name
+                                <input
+                                  type="text"
+                                  id="newPlayerName"
+                                  placeholder="Player Name"
+                                  ng-model="newPlayer.name" />
+                            </label>
+                        </div>
+                        <div class="large-4 columns">
+                            <label for="newPlayerTeam">Team
+                                <input
+                                  type="text"
+                                  id="newPlayerTeam"
+                                  placeholder="Team Name"
+                                  model="newPlayer.team" />
+                            </label>
+                        </div>
+                        <div class="large-4 columns">
+                            <div class="row collapse">
+                                <!-- <label>Input Label</label>
+                                <div class="small-9 columns">
+                                    <input type="text" placeholder="small-9.columns" />
+                                </div>
+                                <div class="small-3 columns">
+                                    <span class="postfix">.com</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
 
-              <button ng-click="cancelCreating()">Cancel creating</button>
+                    <p><button type="submit">Create Player</button></p>
+                    <p><button ng-click="cancelCreating()">Cancel creating</button></p>
+                </form>
             </div>
 
             <!-- Edit a Player -->
             <div ng-if="shouldShowEditing()">
-              Edit a player content would go here
+                Edit a player content would go here
 
-              <button ng-click="cancelEditing()">Cancel Editing</button>
+                <button ng-click="cancelEditing()">Cancel Editing</button>
             </div>
 
 
