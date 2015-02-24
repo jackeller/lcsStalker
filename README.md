@@ -19,7 +19,8 @@ Hit up League of Legends API.  Do some stuff with it.
 Show all information about currently played champion -
     rune list, masteries
 
-- Interface with Twitch API to show if a player is online
+- Twitch API - Show if a specific player is online
+- Twitch API - Show top 20 list of people playing league online
 
 ## Stack
 
