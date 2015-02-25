@@ -100,9 +100,8 @@ angular.module('lcsStalker')
 
     function resetCreateForm() {
         $scope.newPlayer = {
-            player: '',
-            team: '',
-            currentTeam: $scope.currentTeam
+            name: '',
+            team: ''
         }
     }
 
