@@ -37,12 +37,33 @@ angular.module('lcsStalker')
 
     $scope.currentTeam = null;
 
+    $scope.editingPlayer = null;
+
     function setCurrentTeam(team) {
         $scope.currentTeam = team || null;
 
         cancelCreating();
         cancelEditing();
     }
+
+    function setEditingPlayer(player) {
+        $scope.editingPlayer = angular.copy(player);
+    }
+
+    $scope.setEditingPlayer = setEditingPlayer;
+
+    function updatePlayer(player) {
+        var index = _.findIndex($scope.players, function(b){
+            return b.id == player.id;
+        });
+
+        $scope.players[index] = player;
+
+        $scope.editingPlayer = null;
+        $scope.isEditing = false;
+    }
+
+    $scope.updatePlayer = updatePlayer;
 
     function isCurrentTeam(team) {
         return $scope.currentTeam !== null && team.name === $scope.currentTeam.name;
@@ -52,7 +73,7 @@ angular.module('lcsStalker')
     $scope.isCurrentTeam = isCurrentTeam;
 
     // -------------------
-    // Creating and Editing Players
+    // Creating and Editing States
     // -------------------
 
     $scope.isCreating = false;
