@@ -63,6 +63,10 @@ angular.module('lcsStalker')
         $scope.isEditing = false;
     }
 
+    function isSelectedPlayer(playerId) {
+        return $scope.editingPlayer !== null && $scope.editingPlayer.id === playerId
+    }
+
     $scope.updatePlayer = updatePlayer;
 
     function isCurrentTeam(team) {
@@ -71,6 +75,7 @@ angular.module('lcsStalker')
 
     $scope.setCurrentTeam = setCurrentTeam;
     $scope.isCurrentTeam = isCurrentTeam;
+    $scope.isSelectedPlayer = isSelectedPlayer;
 
     // -------------------
     // Creating and Editing States
