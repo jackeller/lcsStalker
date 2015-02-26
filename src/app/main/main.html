@@ -31,7 +31,8 @@
                     ng-class="{'active': isSelectedPlayer(player.id)}">
                     <p>
                         {{player.id}} - {{player.name}} - {{player.team}} -
-                        <a href ng-click="setEditingPlayer(player); startEditing();">Edit</a>
+                        <a href ng-click="setEditingPlayer(player); startEditing();">Edit</a> -
+                         <a href ng-click="deletePlayer(player);">Delete</a>
                     </p>
                 </li>
             </ul>

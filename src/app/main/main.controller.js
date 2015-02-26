@@ -97,6 +97,14 @@ angular.module('lcsStalker')
     $scope.isCurrentTeam = isCurrentTeam;
     $scope.isSelectedPlayer = isSelectedPlayer;
 
+    function deletePlayer(player) {
+        _.remove($scope.players, function(b) {
+            return b.id == player.id;
+        });
+    }
+
+    $scope.deletePlayer = deletePlayer;
+
     // -------------------
     // Creating and Editing States
     // -------------------
