@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module('lcsStalker')
+angular.module('lcsStalker', [
+    'teams',
+    'teams.players'
+])
+
 .controller('MainCtrl', function($scope) {
 
     $scope.teams = [{
