@@ -1,26 +1,6 @@
 'use strict';
 
-angular.module('lcsStalker', [
-        'ui.router',
-        // 'ngAnimate',
-        // 'ngCookies',
-        // 'ngTouch',
-        // 'ngSanitize',
-        // 'ngResource',
-        'teams',
-        'teams.players'
-    ])
-        .config(function ($stateProvider) {
-          $stateProvider
-               .state('route2', {
-                    url: "",
-                    templateUrl: "foo.html"
-                })
-          ;
-      })
-//     });
-
-// angular.module('lcsStalker')
+angular.module('lcsStalker')
 
 .controller('MainCtrl', function($scope) {
 
