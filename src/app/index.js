@@ -10,14 +10,12 @@ angular.module('lcsStalker', [
         'teams',
         'teams.players'
     ])
-        .config(function ($stateProvider) {
+        .config(function ($stateProvider, $urlRouterProvider) {
           $stateProvider
               .state('default', {
-                  url: '', // Make to navigate to index.html#/
-                  templateUrl: 'app/teams/teams.tmpl.html',
-                  // templateUrl: 'app/main/main.html',
-                  controller: 'MainCtrl'
+                  url: '',
+                  abstract: true
               })
           ;
-      
+          $urlRouterProvider.otherwise('/');
     });
