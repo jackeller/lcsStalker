@@ -22,9 +22,6 @@ angular.module('teams', [
                 }
             });
     })
-    .controller('PlayersCtrl', ['$scope', function ($scope){
-
-    }])
-    .controller('TeamsCtrl', ['$scope', function($scope){
+    .controller('TeamsCtrl', ['$scope', function ($scope){
 
     }]);
