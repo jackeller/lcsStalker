@@ -15,12 +15,13 @@ angular.module('teams.players', [
                 url: 'teams/:team',
                 views: {
                     'players@' : {
-                        controller: 'PlayersCtrl',
+                        controller: 'PlayersCtrl as players',
                         templateUrl: 'app/teams/players/players.tmpl.html'
                     }
                 }
             });
     })
-    .controller('PlayersCtrl', function($scope, $stateParams){
-        $scope.currentTeamName = $stateParams.team;
+    .controller('PlayersCtrl', function($stateParams){
+        var players = this;
+        players.currentTeamName = $stateParams.team;
     });

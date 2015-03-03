@@ -6,7 +6,7 @@
                     </a>
                 </li>
                 <li ng-repeat="team in teams" ng-class="{ 'active' : isCurrentTeam(team) }">
-                    <a href ng-click="setCurrentTeam(team)">{{team.name}}</a>
+                    <a href ui-sref="default.teams.players({team:team.name})" ng-click="setCurrentTeam(team)">{{team.name}}</a>
                 </li>
             </ul>
         

@@ -2,7 +2,7 @@
 
 angular.module('lcsStalker')
 
-.controller('MainCtrl', function($scope) {
+.controller('MainCtrl', function($scope, $state) {
 
     $scope.teams = [{
         "id": 0,
@@ -62,6 +62,8 @@ angular.module('lcsStalker')
 
     function setCurrentTeam(team) {
         $scope.currentTeam = team || null;
+
+        // $state.go('default.teams.players', {team: team.name});
 
         cancelCreating();
         cancelEditing();
