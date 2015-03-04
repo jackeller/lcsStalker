@@ -1,68 +1,69 @@
 
 <h1>{{players.currentTeamName}}</h1>
-    <ul>
-        <li ng-repeat="player in players | filter: team = currentTeam.name" ng-class="{'active': isSelectedPlayer(player.id)}">
-            <p>
-                {{player.id}} - {{player.name}} - {{player.team}} -
-                <a href ng-click="setEditingPlayer(player); startEditing();">Edit</a> -
-                <a href ng-click="deletePlayer(player);">Delete</a>
-            </p>
-        </li>
-    </ul>
 
-    <p ng-if="shouldShowCreating()">
-        <a href ng-click="startCreating()">Create Player</a>
-    </p>
+<ul>
+    <li ng-repeat="player in playersListCtrl.players | filter: team = currentTeam.name" ng-class="{'active': isSelectedPlayer(player.id)}">
+        <p>
+            {{player.id}} - {{player.name}} - {{player.team}} -
+            <a href ng-click="setEditingPlayer(player); startEditing();">Edit</a> -
+            <a href ng-click="deletePlayer(player);">Delete</a>
+        </p>
+    </li>
+</ul>
 
-    <!-- Create a Player -->
-    <div ng-if="isCreating">
-        <form ng-submit="createPlayer(newPlayer)" novalidate>
-            <div class="row">
-                <div class="large-4 columns">
-                    <label for="newPlayerName">Player Name
-                        <input type="text" id="newPlayerName" placeholder="Player Name" ng-model="newPlayer.name" />
-                    </label>
-                </div>
-                <div class="large-4 columns">
-                    <label for="newPlayerTeam">Team
-                        <input type="text" id="newPlayerTeam" placeholder="Team Name" ng-model="newPlayer.team" />
-                    </label>
-                </div>
+<p ng-if="shouldShowCreating()">
+    <a href ng-click="startCreating()">Create Player</a>
+</p>
+
+<!-- Create a Player -->
+<div ng-if="isCreating">
+    <form ng-submit="createPlayer(newPlayer)" novalidate>
+        <div class="row">
+            <div class="large-4 columns">
+                <label for="newPlayerName">Player Name
+                    <input type="text" id="newPlayerName" placeholder="Player Name" ng-model="newPlayer.name" />
+                </label>
             </div>
-
-            <p>
-                <button type="submit">Create Player</button>
-            </p>
-            <p>
-                <button ng-click="cancelCreating()">Cancel creating</button>
-            </p>
-        </form>
-    </div>
-
-    <!-- Edit a Player -->
-    <div ng-show="shouldShowEditing()">
-        <form ng-submit="updatePlayer(editingPlayer)" novalidate>
-            <div class="row">
-                <div class="large-4 columns">
-
-                    <h4>Editing {{editingPlayer.name}}</h4>
-                    <label for="editedPlayerName">Player Name
-                        <input type="text" id="editedPlayerName" placeholder="Player Name" ng-model="editingPlayer.name" />
-                    </label>
-                </div>
-                <div class="large-4 columns">
-                    <label for="editedPlayerTeam">Team
-                        <input type="text" id="editedPlayerTeam" placeholder="Team Name" ng-model="editingPlayer.team" />
-                    </label>
-                </div>
+            <div class="large-4 columns">
+                <label for="newPlayerTeam">Team
+                    <input type="text" id="newPlayerTeam" placeholder="Team Name" ng-model="newPlayer.team" />
+                </label>
             </div>
+        </div>
 
-            <p>
-                <button type="submit">Complete Edits</button>
-            </p>
-            <p>
-                <button ng-click="cancelEditing()">Cancel Editing</button>
-            </p>
-        </form>
+        <p>
+            <button type="submit">Create Player</button>
+        </p>
+        <p>
+            <button ng-click="cancelCreating()">Cancel creating</button>
+        </p>
+    </form>
+</div>
 
-    </div>
+<!-- Edit a Player -->
+<div ng-show="shouldShowEditing()">
+    <form ng-submit="updatePlayer(editingPlayer)" novalidate>
+        <div class="row">
+            <div class="large-4 columns">
+
+                <h4>Editing {{editingPlayer.name}}</h4>
+                <label for="editedPlayerName">Player Name
+                    <input type="text" id="editedPlayerName" placeholder="Player Name" ng-model="editingPlayer.name" />
+                </label>
+            </div>
+            <div class="large-4 columns">
+                <label for="editedPlayerTeam">Team
+                    <input type="text" id="editedPlayerTeam" placeholder="Team Name" ng-model="editingPlayer.team" />
+                </label>
+            </div>
+        </div>
+
+        <p>
+            <button type="submit">Complete Edits</button>
+        </p>
+        <p>
+            <button ng-click="cancelEditing()">Cancel Editing</button>
+        </p>
+    </form>
+
+</div>

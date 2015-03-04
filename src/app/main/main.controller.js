@@ -4,58 +4,6 @@ angular.module('lcsStalker')
 
 .controller('MainCtrl', function($scope, $state) {
 
-    $scope.teams = [{
-        "id": 0,
-        "name": "TSM"
-    }, {
-        "id": 1,
-        "name": "C9"
-    }, {
-        "id": 2,
-        "name": "CLG"
-    }, {
-        "id": 3,
-        "name": "DIG"
-    }];
-
-    $scope.players = [{
-        "id": 0,
-        "name": "Marcus 'Dyrus' Hill",
-        "team": "TSM"
-    }, {
-        "id": 1,
-        "name": "Søren 'Bjergsen' Bjerg",
-        "team": "TSM"
-    }, {
-        "id": 2,
-        "name": "Darshan 'Zion Spartan' Upadhyaya",
-        "team": "CLG"
-    }, {
-        "id": 3,
-        "name": "Alan 'KiWiKiD' Nguyen",
-        "team": "DIG"
-    }, {
-        "id": 4,
-        "name": "An 'Balls' Le",
-        "team": "C9"
-    }, {
-        "id": 5,
-        "name": "Will 'Meteos' Hartman",
-        "team": "C9"
-    }, {
-        "id": 6,
-        "name": "Hai 'Hai' Lam",
-        "team": "C9"
-    }, {
-        "id": 7,
-        "name": "Zachary 'Sneaky' Scuderi",
-        "team": "C9"
-    }, {
-        "id": 8,
-        "name": "Daerek 'LemonNation' Hart",
-        "team": "C9"
-    }];
-
     $scope.currentTeam = null;
 
     $scope.editingPlayer = null;

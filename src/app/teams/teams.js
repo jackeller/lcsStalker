@@ -12,16 +12,17 @@ angular.module('teams', [
                 url: '/',
                 views: {
                     'players@': {
-                        controller: 'PlayersCtrl',
+                        controller: 'PlayersCtrl as playersListCtrl',
                         templateUrl: 'app/teams/players/players.tmpl.html'
                     },
                     'teams@' : {
-                        controller: 'TeamsCtrl',
+                        controller: 'TeamsListCtrl as teamsListCtrl',
                         templateUrl: 'app/teams/teams.tmpl.html'
                     }
                 }
             });
     })
-    .controller('TeamsCtrl', ['$scope', function ($scope){
-
-    }]);
+    .controller('TeamsListCtrl', function (TeamsModel){
+        var teamsListCtrl = this;
+        teamsListCtrl.teams = TeamsModel.getTeams();
+    });
