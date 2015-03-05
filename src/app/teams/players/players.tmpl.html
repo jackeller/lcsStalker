@@ -1,9 +1,11 @@
 
 <h1>{{playersListCtrl.currentTeamName}}</h1>
-<!-- <h1>players - {{playersListCtrl.players}}</h1> -->
 
 <ul>
-    <li ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.currentTeamName" ng-class="{'active': isSelectedPlayer(player.id)}">
+    <li
+        ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.currentTeamName"
+        ng-class="{'active': isSelectedPlayer(player.id)}"
+        >
         <p>
             {{player.id}} - {{player.name}} - {{player.team}} -
             <a href ng-click="setEditingPlayer(player); startEditing();">Edit</a> -

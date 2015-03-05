@@ -24,5 +24,13 @@ angular.module('teams', [
     })
     .controller('TeamsListCtrl', function (TeamsModel){
         var teamsListCtrl = this;
-        teamsListCtrl.teams = TeamsModel.getTeams();
+
+
+        // teamsListCtrl.teams = TeamsModel.getTeams();
+
+        TeamsModel.getTeams()
+            .then(function(result) {
+                // TeamsListCtrl.teams = result;
+                // console.log('result' + result)
+            });
     });
