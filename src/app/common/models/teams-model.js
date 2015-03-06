@@ -9,7 +9,11 @@ angular.module('lcsStalker.models.teams', [
             teams;
 
         model.getTeams = function() {
-            return $http.get(URLS.FETCH);
+            return $http({
+                method: 'jsonp',
+                url:  URLS.FETCH,
+                responseType: "json"
+            });
         }
     })
 ;

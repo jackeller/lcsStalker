@@ -31,6 +31,6 @@ angular.module('teams', [
         TeamsModel.getTeams()
             .then(function(result) {
                 // TeamsListCtrl.teams = result;
-                // console.log('result' + result)
+                // console.log('result', result)
             });
     });
