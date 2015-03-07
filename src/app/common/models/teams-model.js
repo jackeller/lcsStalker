@@ -8,16 +8,17 @@ angular.module('lcsStalker.models.teams', [
             },
             teams;
 
+        function extract( result ) {
+            return result.data;
+        }
+
+        function cacheTeams( result ) {
+            teams = extract(result);
+            return teams;
+        }
+
         model.getTeams = function() {
-            // return $http({
-            //     method: 'jsonp',
-            //     url:  URLS.FETCH,
-            //     responseType: "json"
-            // });
-            // return $http.get(URLS.FETCH).then(cacheCategories);
-            return $http.get(URLS.FETCH);
-
-
+            return $http.get(URLS.FETCH).then(cacheTeams);
         }
     })
 ;

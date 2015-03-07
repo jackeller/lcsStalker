@@ -24,5 +24,9 @@ angular.module('teams.players', [
     .controller('PlayersCtrl', function($stateParams, PlayersModel){
         var playersListCtrl = this;
         playersListCtrl.currentTeamName = $stateParams.team;
-        playersListCtrl.players = PlayersModel.getPlayers();
+
+        PlayersModel.getPlayers()
+            .then(function(result) {
+                playersListCtrl.players = result;
+            });
     });
