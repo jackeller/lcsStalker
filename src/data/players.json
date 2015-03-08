@@ -1,50 +1,38 @@
 [{
-    "id": 0,
     "name": "Marcus 'Dyrus' Hill",
     "team": "TSM",
     "twitch": "tsm_dyrus"
 }, {
-    "id": 1,
     "name": "Søren 'Bjergsen' Bjerg",
     "team": "TSM"
 }, {
-    "id": 2,
     "name": "Lucas 'Santorin' Larsen",
     "team": "TSM"
 }, {
-    "id": 3,
     "name": "Jason 'WildTurtle' Tran",
     "team": "TSM"
 }, {
-    "id": 4,
     "name": "Jang-sik 'Lustboy' Ham",
     "team": "TSM"
 }, {
-    "id": 5,
     "name": "Darshan 'Zion Spartan' Upadhyaya",
     "team": "CLG"
 }, {
-    "id": 6,
     "name": "Alan 'KiWiKiD' Nguyen",
     "team": "DIG"
 }, {
-    "id": 7,
     "name": "An 'Balls' Le",
     "team": "C9"
 }, {
-    "id": 8,
     "name": "Will 'Meteos' Hartman",
     "team": "C9"
 }, {
-    "id": 9,
     "name": "Hai 'Hai' Lam",
     "team": "C9"
 }, {
-    "id": 10,
     "name": "Zachary 'Sneaky' Scuderi",
     "team": "C9"
 }, {
-    "id": 11,
     "name": "Daerek 'LemonNation' Hart",
     "team": "C9"
 }]
