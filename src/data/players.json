@@ -1,7 +1,8 @@
 [{
     "id": 0,
     "name": "Marcus 'Dyrus' Hill",
-    "team": "TSM"
+    "team": "TSM",
+    "twitch": "tsm_dyrus"
 }, {
     "id": 1,
     "name": "Søren 'Bjergsen' Bjerg",
