@@ -1,18 +1,33 @@
 
 <h1>{{playersListCtrl.currentTeamName}}</h1>
 
-<ul>
-    <li
-        ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.currentTeamName"
-        ng-class="{'active': isSelectedPlayer(player.id)}"
-        >
-        <p>
-            {{player.id}} - {{player.name}} - {{player.team}} -
-            <a href ng-click="setEditingPlayer(player); startEditing();">Edit</a> -
-            <a href ng-click="deletePlayer(player);">Delete</a>
-        </p>
-    </li>
-</ul>
+<table ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.currentTeamName"
+ng-class="{'active': isSelectedPlayer(player.id)}">
+    <tr>
+        <td>ID</td>
+        <td>{{player.id}}</td>
+    </tr>
+
+    <tr>
+        <td>Name</td>
+        <td>{{player.name}}</td>
+    </tr>
+
+    <tr>
+        <td>Team</td>
+        <td>{{player.team}}</td>
+    </tr>
+
+    <tr>
+        <td>twitch</td>
+        <td>{{player.twitch}} - <a target="_blank" href="https://api.twitch.tv/kraken/users/{{player.twitch}}">https://api.twitch.tv/kraken/users/{{player.twitch}}</a></td>
+    </tr>
+
+    <tr>
+        <td><a href ng-click="setEditingPlayer(player); startEditing();">Edit</a></td>
+        <td><a href ng-click="deletePlayer(player);">Delete</a></td>
+    </tr>
+</table>
 
 <p ng-if="shouldShowCreating()">
     <a href ng-click="startCreating()">Create Player</a>
