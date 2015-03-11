@@ -4,16 +4,20 @@
     "twitch": "tsm_dyrus"
 }, {
     "name": "Søren 'Bjergsen' Bjerg",
-    "team": "TSM"
+    "team": "TSM",
+    "twitch": "tsm_bjergsen"
 }, {
     "name": "Lucas 'Santorin' Larsen",
-    "team": "TSM"
+    "team": "TSM",
+    "twitch": "tsm_santorin"
 }, {
     "name": "Jason 'WildTurtle' Tran",
-    "team": "TSM"
+    "team": "TSM",
+    "twitch": "tsm_wildturtle"
 }, {
     "name": "Jang-sik 'Lustboy' Ham",
-    "team": "TSM"
+    "team": "TSM",
+    "twitch": "lustboy"
 }, {
     "name": "Darshan 'Zion Spartan' Upadhyaya",
     "team": "CLG"

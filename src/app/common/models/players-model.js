@@ -23,7 +23,7 @@ angular.module('lcsStalker.models.players', [
         }
 
         model.getTwitchOnlineStatus = function ( twitch ) {
-            return $http.get(URLS.TWITCH + twitch).then(extract);
+            return $http.jsonp(URLS.TWITCH + twitch + "?callback=JSON_CALLBACK").then(extract);
         }
     })
 ;

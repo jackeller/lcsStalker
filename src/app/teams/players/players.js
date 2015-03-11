@@ -29,7 +29,10 @@ angular.module('teams.players', [
         playersListCtrl.getTwitchOnlineStatus = function( twitch ) {
             PlayersModel.getTwitchOnlineStatus( twitch )
                 .then( function( result) {
-                    console.log("foo", result);
+                    console.log(result);
+                    if ( result.stream ) {
+                        console.log("THEY ARE ONLINE!!!");
+                    }
                 });
         }
 
