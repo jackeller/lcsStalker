@@ -19,7 +19,8 @@ ng-class="{'active': isSelectedPlayer(player.id)}">
         <td>{{player.twitch}} -
             <a
                 href
-                ng-click="playersListCtrl.getTwitchOnlineStatus( player )">
+                ng-click="playersListCtrl.getTwitchOnlineStatus( player )"
+                ng-init="playersListCtrl.getTwitchOnlineStatus( player )">
                     {{player.twitch}}
             </a>
         </td>
