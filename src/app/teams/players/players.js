@@ -25,13 +25,14 @@ angular.module('teams.players', [
     .controller('PlayersCtrl', function($stateParams, PlayersModel){
         var playersListCtrl = this;
         playersListCtrl.currentTeamName = $stateParams.team;
+        // playersListCtrl.twitchStatus = "Offline";
 
-        playersListCtrl.getTwitchOnlineStatus = function( twitch ) {
-            PlayersModel.getTwitchOnlineStatus( twitch )
-                .then( function( result) {
+        playersListCtrl.getTwitchOnlineStatus = function( player ) {
+            PlayersModel.getTwitchOnlineStatus( player.twitch )
+                .then( function(result) {
                     console.log(result);
                     if ( result.stream ) {
-                        console.log("THEY ARE ONLINE!!!");
+                        player.twitchStatus = "Online";
                     }
                 });
         }

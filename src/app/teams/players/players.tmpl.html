@@ -3,10 +3,6 @@
 
 <table ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.currentTeamName"
 ng-class="{'active': isSelectedPlayer(player.id)}">
-    <tr>
-        <td>ID</td>
-        <td>{{player.id}}</td>
-    </tr>
 
     <tr>
         <td>Name</td>
@@ -23,10 +19,15 @@ ng-class="{'active': isSelectedPlayer(player.id)}">
         <td>{{player.twitch}} -
             <a
                 href
-                ng-click="playersListCtrl.getTwitchOnlineStatus( player.twitch )">
+                ng-click="playersListCtrl.getTwitchOnlineStatus( player )">
                     {{player.twitch}}
             </a>
         </td>
+    </tr>
+
+    <tr>
+        <td>Twitch Status</td>
+        <td>{{player.twitchStatus}}</td>
     </tr>
 
     <tr>
