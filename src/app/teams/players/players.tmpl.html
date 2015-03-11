@@ -20,7 +20,13 @@ ng-class="{'active': isSelectedPlayer(player.id)}">
 
     <tr>
         <td>twitch</td>
-        <td>{{player.twitch}} - <a target="_blank" href="https://api.twitch.tv/kraken/users/{{player.twitch}}">https://api.twitch.tv/kraken/users/{{player.twitch}}</a></td>
+        <td>{{player.twitch}} -
+            <a
+                href
+                ng-click="playersListCtrl.getTwitchOnlineStatus( player.twitch )">
+                    {{player.twitch}}
+            </a>
+        </td>
     </tr>
 
     <tr>

@@ -4,7 +4,8 @@ angular.module('lcsStalker.models.players', [
     .service('PlayersModel', function($http){
         var model = this,
             URLS = {
-                FETCH: 'data/players.json'
+                FETCH: 'data/players.json',
+                TWITCH: 'https://api.twitch.tv/kraken/streams/'
             },
             players;
 
@@ -19,6 +20,10 @@ angular.module('lcsStalker.models.players', [
 
         model.getPlayers = function() {
             return $http.get(URLS.FETCH).then(cachePlayers);
+        }
+
+        model.getTwitchOnlineStatus = function ( twitch ) {
+            return $http.get(URLS.TWITCH + twitch).then(extract);
         }
     })
 ;

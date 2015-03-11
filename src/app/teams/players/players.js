@@ -21,9 +21,19 @@ angular.module('teams.players', [
                 }
             });
     })
+
     .controller('PlayersCtrl', function($stateParams, PlayersModel){
         var playersListCtrl = this;
         playersListCtrl.currentTeamName = $stateParams.team;
+
+        playersListCtrl.getTwitchOnlineStatus = function( twitch ) {
+            PlayersModel.getTwitchOnlineStatus( twitch )
+                .then( function( result) {
+                    console.log("foo", result);
+                });
+        }
+
+        // playersListCtrl.getTwitchOnlineStatus = getTwitchOnlineStatus;
 
         PlayersModel.getPlayers()
             .then(function(result) {
