@@ -20,23 +20,30 @@
     "twitch": "lustboy"
 }, {
     "name": "Darshan 'Zion Spartan' Upadhyaya",
-    "team": "CLG"
+    "team": "CLG",
+    "twitch": "zionspartan"
 }, {
     "name": "Alan 'KiWiKiD' Nguyen",
-    "team": "DIG"
+    "team": "DIG",
+    "twitch": "kiwikid"
 }, {
     "name": "An 'Balls' Le",
-    "team": "C9"
+    "team": "C9",
+    "twitch": "manballs"
 }, {
     "name": "Will 'Meteos' Hartman",
-    "team": "C9"
+    "team": "C9",
+    "twitch": "meteos"
 }, {
     "name": "Hai 'Hai' Lam",
-    "team": "C9"
+    "team": "C9",
+    "twitch": "hail9"
 }, {
     "name": "Zachary 'Sneaky' Scuderi",
-    "team": "C9"
+    "team": "C9",
+    "twitch": "sneakycastroo"
 }, {
     "name": "Daerek 'LemonNation' Hart",
-    "team": "C9"
+    "team": "C9",
+    "twitch": "lemination"
 }]
