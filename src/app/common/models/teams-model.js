@@ -1,7 +1,7 @@
 angular.module('lcsStalker.models.teams', [
 
 ])
-    .service('TeamsModel', function($http) {
+    .service('TeamsModel', function($http, $q) {
         var model = this,
             URLS = {
                 FETCH: 'data/teams.json'
@@ -18,7 +18,28 @@ angular.module('lcsStalker.models.teams', [
         }
 
         model.getTeams = function() {
-            return $http.get(URLS.FETCH).then(cacheTeams);
+            return (teams) ? $q.when(teams) : $http.get(URLS.FETCH).then(cacheTeams);
+        }
+
+        model.getTeamByName = function( teamName ) {
+            var deferred = $q.defer();
+
+            function findTeam() {
+                return _.find(teams, function(c){
+                    return c.name == teamName;
+                })
+            }
+
+            if (teams) {
+                deferred.resolve(findTeam());
+            } else {
+                model.getTeams()
+                    .then(function(result){
+                        deferred.resolve(findTeam());
+                    })
+            }
+
+            return deferred.promise;
         }
     })
 ;

@@ -1,7 +1,7 @@
 angular.module('lcsStalker.models.players', [
 
     ])
-    .service('PlayersModel', function($http){
+    .service('PlayersModel', function($http, $q){
         var model = this,
             URLS = {
                 FETCH: 'data/players.json',
@@ -19,7 +19,7 @@ angular.module('lcsStalker.models.players', [
         }
 
         model.getPlayers = function() {
-            return $http.get(URLS.FETCH).then(cachePlayers);
+            return (players) ? $q.when(players) : $http.get(URLS.FETCH).then(cachePlayers);
         }
 
         model.getTwitchOnlineStatus = function ( twitch ) {
