@@ -1,0 +1,23 @@
+<form ng-submit="updatePlayer(editingPlayer)" novalidate>
+    <div class="row">
+        <div class="large-4 columns">
+
+            <h4>Editing {{editingPlayer.name}}</h4>
+            <label for="editedPlayerName">Player Name
+                <input type="text" id="editedPlayerName" placeholder="Player Name" ng-model="editingPlayer.name" />
+            </label>
+        </div>
+        <div class="large-4 columns">
+            <label for="editedPlayerTeam">Team
+                <input type="text" id="editedPlayerTeam" placeholder="Team Name" ng-model="editingPlayer.team" />
+            </label>
+        </div>
+    </div>
+
+    <p>
+        <button type="submit">Complete Edits</button>
+    </p>
+    <p>
+        <button ng-click="cancelEditing()">Cancel Editing</button>
+    </p>
+</form>

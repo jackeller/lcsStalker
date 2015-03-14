@@ -41,7 +41,7 @@
                 <a href ng-click="startCreating()">Create Player</a>
             </p>
 
-            <!-- Create a Player -->
+            
             <div ng-if="isCreating">
                 <form ng-submit="createPlayer(newPlayer)" novalidate>
                     <div class="row">
@@ -70,7 +70,7 @@
                 </form>
             </div>
 
-            <!-- Edit a Player -->
+            
             <div ng-show="shouldShowEditing()">
                  <form ng-submit="updatePlayer(editingPlayer)" novalidate>
                     <div class="row">
@@ -111,7 +111,6 @@
 
     </div>
 
-    <!--
   <div ng-include="'components/navbar/navbar.html'"></div>
 
   <div class="row">
