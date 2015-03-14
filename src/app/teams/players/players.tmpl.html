@@ -37,31 +37,6 @@ ng-class="{'active': isSelectedPlayer(player.id)}">
     </tr>
 </table>
 
-<p ng-if="shouldShowCreating()">
+<ui-view ng-if="shouldShowCreating()">
     <a href ng-click="startCreating()">Create Player</a>
-</p>
-
-<!-- Create a Player -->
-<div ng-if="isCreating">
-    <form ng-submit="createPlayer(newPlayer)" novalidate>
-        <div class="row">
-            <div class="large-4 columns">
-                <label for="newPlayerName">Player Name
-                    <input type="text" id="newPlayerName" placeholder="Player Name" ng-model="newPlayer.name" />
-                </label>
-            </div>
-            <div class="large-4 columns">
-                <label for="newPlayerTeam">Team
-                    <input type="text" id="newPlayerTeam" placeholder="Team Name" ng-model="newPlayer.team" />
-                </label>
-            </div>
-        </div>
-
-        <p>
-            <button type="submit">Create Player</button>
-        </p>
-        <p>
-            <button ng-click="cancelCreating()">Cancel creating</button>
-        </p>
-    </form>
-</div>
+</ui-view>
