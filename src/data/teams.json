@@ -1,37 +1,47 @@
 [
     {
         "id": 0,
-        "name": "TSM"
+        "name": "Team SoloMid",
+        "abbreviation": "TSM"
     },
     {
         "id": 1,
-        "name": "C9"
+        "name": "Cloud9",
+        "abbreviation": "C9"
     },
     {
         "id": 2,
-        "name": "CLG"
+        "name": "Counter Logic Gaming",
+        "abbreviation": "CLG"
     },
     {
         "id": 3,
-        "name": "Team Dignitas"
+        "name": "Team Dignitas",
+        "abbreviation": "DIG"
     },
     {
         "id": 4,
-        "name": "Gravity"
+        "name": "Gravity",
+        "abbreviation": "GRAV"
     },
     {
-        "name": "Team 8"
+        "name": "Team 8",
+        "abbreviation": "TM8"
     },
     {
-        "name": "Team Coast"
+        "name": "Team Coast",
+        "abbreviation": "CST"
     },
     {
-        "name": "Team Impulse"
+        "name": "Team Impulse",
+        "abbreviation": "IMP"
     },
     {
-        "name": "Team Liquid"
+        "name": "Team Liquid",
+        "abbreviation": "LQD"
     },
     {
-        "name": "Winterfox"
+        "name": "Winterfox",
+        "abbreviation": "WFX"
     }
 ]
