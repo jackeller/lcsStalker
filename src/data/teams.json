@@ -13,6 +13,25 @@
     },
     {
         "id": 3,
-        "name": "DIG"
+        "name": "Team Dignitas"
+    },
+    {
+        "id": 4,
+        "name": "Gravity"
+    },
+    {
+        "name": "Team 8"
+    },
+    {
+        "name": "Team Coast"
+    },
+    {
+        "name": "Team Impulse"
+    },
+    {
+        "name": "Team Liquid"
+    },
+    {
+        "name": "Winterfox"
     }
 ]
