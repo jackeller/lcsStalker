@@ -16,6 +16,6 @@ angular.module('teams.players.create', [
         }])
 
         .controller('CreateBookmarkCtrl', ['', function(){
-            
+
         }])
 ;

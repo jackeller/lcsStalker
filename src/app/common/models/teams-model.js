@@ -6,7 +6,8 @@ angular.module('lcsStalker.models.teams', [
             URLS = {
                 FETCH: 'data/teams.json'
             },
-            teams;
+            teams,
+            currentTeam;
 
         function extract( result ) {
             return result.data;
@@ -19,6 +20,21 @@ angular.module('lcsStalker.models.teams', [
 
         model.getTeams = function() {
             return (teams) ? $q.when(teams) : $http.get(URLS.FETCH).then(cacheTeams);
+        }
+
+        model.setCurrentTeam = function( teamName ) {
+            return model.getTeamByName(teamName)
+                .then(function(team) {
+                    currentTeam = team;
+                });
+        }
+
+        model.getCurrentTeam = function() {
+            return currentTeam;
+        }
+
+        model.getCurrentTeamName = function() {
+            return currentTeam ? currentTeam.name : '';
         }
 
         model.getTeamByName = function( teamName ) {

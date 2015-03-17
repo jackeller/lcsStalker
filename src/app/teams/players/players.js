@@ -22,9 +22,10 @@ angular.module('teams.players', [
             });
     })
 
-    .controller('PlayersCtrl', function($stateParams, PlayersModel){
+    .controller('PlayersCtrl', function($stateParams, PlayersModel, TeamsModel){
         var playersListCtrl = this;
-        playersListCtrl.currentTeamName = $stateParams.team;
+
+        TeamsModel.setCurrentTeam($stateParams.team);
 
         // <iframe src="http://www.twitch.tv/imaqtpie/embed" frameborder="0" scrolling="no" height="378" width="620"></iframe><a href="http://www.twitch.tv/imaqtpie?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Watch live video from imaqtpie on www.twitch.tv</a>
 
@@ -45,7 +46,10 @@ angular.module('teams.players', [
         }
 
         PlayersModel.getPlayers()
-            .then(function(result) {
-                playersListCtrl.players = result;
+            .then(function(players) {
+                playersListCtrl.players = players;
             });
+
+        playersListCtrl.getCurrentCategory = TeamsModel.getCurrentCategory;
+        playersListCtrl.getCurrentCategoryName = TeamsModel.getCurrentCategoryName;
     });
