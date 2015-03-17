@@ -42,6 +42,8 @@ angular.module('teams.players', [
                     } else {
                         player.twitchStatus = "Offline";
                     }
+
+                    console.log( player.name + " is " + player.twitchStatus);
                 });
         }
 

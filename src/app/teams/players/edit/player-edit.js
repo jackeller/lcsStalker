@@ -16,6 +16,6 @@ angular.module('teams.players.edit', [
         }])
 
         .controller('EditBookmarkCtrl', ['', function(){
-            
+
         }])
 ;
