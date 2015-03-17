@@ -52,6 +52,6 @@ angular.module('teams.players', [
                 playersListCtrl.players = players;
             });
 
-        playersListCtrl.getCurrentCategory = TeamsModel.getCurrentCategory;
-        playersListCtrl.getCurrentCategoryName = TeamsModel.getCurrentCategoryName;
+        playersListCtrl.getCurrentTeam = TeamsModel.getCurrentTeam;
+        playersListCtrl.getCurrentTeamName = TeamsModel.getCurrentTeamName;
     });

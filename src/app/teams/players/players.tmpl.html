@@ -1,7 +1,7 @@
 
-<h1>{{playersListCtrl.currentTeamName}}</h1>
+<h1>{{playersListCtrl.getCurrentTeamName}}</h1>
 
-<table ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.currentTeamName"
+<table ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.getCurrentTeamName"
 ng-class="{'active': isSelectedPlayer(player.id)}">
 
     <tr>
