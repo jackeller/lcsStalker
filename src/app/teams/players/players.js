@@ -43,7 +43,12 @@ angular.module('teams.players', [
                         player.twitchStatus = "Offline";
                     }
 
-                    console.log( player.name + " is " + player.twitchStatus);
+                    if (player.twitchStatus == "Online") {
+                        console.warn( player.name + " is " + player.twitchStatus );
+                    } else {
+                        console.log( player.name + " is " + player.twitchStatus);
+                    }
+
                 });
         }
 
