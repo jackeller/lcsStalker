@@ -1,8 +1,12 @@
 
-<h1>{{playersListCtrl.CurrentTeamName}}</h1>
+<h1>Team name - {{playersListCtrl.getCurrentTeamName}}</h1>
+<h1>Team name - {{playersListCtrl.getCurrentTeam}}</h1>
+<h1>Team name - {{playersListCtrl.getCurrentTeamName}}</h1>
+<h1>Team name - {{playersListCtrl.getCurrentTeamName}}</h1>
 
-<table ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.getCurrentTeamName"
-ng-class="{'active': isSelectedPlayer(player.id)}">
+<table
+    ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.getCurrentTeamName"
+    ng-class="{'active': isSelectedPlayer(player.id)}">
 
     <tr>
         <td>Name</td>
@@ -15,7 +19,7 @@ ng-class="{'active': isSelectedPlayer(player.id)}">
     </tr>
 
     <tr>
-        <td>twitch</td>
+        <td>Twitch</td>
         <td>{{player.twitch}} -
             <a
                 href

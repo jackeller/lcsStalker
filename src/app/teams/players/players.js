@@ -27,6 +27,8 @@ angular.module('teams.players', [
 
         TeamsModel.setCurrentTeam($stateParams.team);
 
+        console.log( "statepaprams team is ",  $stateParams.team);
+
         // <iframe src="http://www.twitch.tv/imaqtpie/embed" frameborder="0" scrolling="no" height="378" width="620"></iframe><a href="http://www.twitch.tv/imaqtpie?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Watch live video from imaqtpie on www.twitch.tv</a>
 
         playersListCtrl.getTwitchOnlineStatus = function( player ) {
@@ -55,10 +57,14 @@ angular.module('teams.players', [
         PlayersModel.getPlayers()
             .then(function(players) {
                 playersListCtrl.players = players;
+
+                console.log("players", players);
             });
 
         playersListCtrl.getCurrentTeam = TeamsModel.getCurrentTeam;
         playersListCtrl.getCurrentTeamName = TeamsModel.getCurrentTeamName;
+
+        console.log( "getCurrentTeam ",  playersListCtrl.getCurrentTeam);
     });
 
 

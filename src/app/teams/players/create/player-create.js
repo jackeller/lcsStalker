@@ -11,11 +11,11 @@ angular.module('teams.players.create', [
                 .state('default.teams.players.create', {
                     url: '/players/create',
                     templateUrl: 'app/teams/players/create/player-create.tmpl.html',
-                    controller: 'CreateBookmarkCtrl as createBookmarkCtrl'
+                    controller: 'CreatePlayerCtrl as createPlayerCtrl'
                 });
         }])
 
-        .controller('CreateBookmarkCtrl', ['', function(){
+        .controller('CreatePlayerCtrl', ['', function(){
 
         }])
 ;

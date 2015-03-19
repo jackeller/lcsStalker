@@ -11,11 +11,11 @@ angular.module('teams.players.edit', [
                 .state('default.teams.players.edit', {
                     url: '/players/edit',
                     templateUrl: 'app/teams/players/edit/player-edit.tmpl.html',
-                    controller: 'EditBookmarkCtrl as editBookmarkCtrl'
+                    controller: 'EditPlayerCtrl as editPlayerCtrl'
                 });
         }])
 
-        .controller('EditBookmarkCtrl', ['', function(){
+        .controller('EditPlayerCtrl', ['', function(){
 
         }])
 ;
