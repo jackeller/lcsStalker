@@ -60,3 +60,5 @@ angular.module('teams.players', [
         playersListCtrl.getCurrentTeam = TeamsModel.getCurrentTeam;
         playersListCtrl.getCurrentTeamName = TeamsModel.getCurrentTeamName;
     });
+
+
