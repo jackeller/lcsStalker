@@ -34,7 +34,7 @@ angular.module('teams.players', [
         playersListCtrl.getTwitchOnlineStatus = function( player ) {
 
             player.twitchStatus = "Loading...";
-            console.log("Getting twitch status for " + player.name + " aka " + player.twitch);
+            // console.log("Getting twitch status for " + player.name + " aka " + player.twitch);
 
             PlayersModel.getTwitchOnlineStatus( player.twitch )
                 .then( function(result) {
@@ -46,9 +46,9 @@ angular.module('teams.players', [
                     }
 
                     if (player.twitchStatus == "Online") {
-                        console.warn( player.name + " is " + player.twitchStatus );
+                        // console.warn( player.name + " is " + player.twitchStatus );
                     } else {
-                        console.log( player.name + " is " + player.twitchStatus);
+                        // console.log( player.name + " is " + player.twitchStatus);
                     }
 
                 });
@@ -65,6 +65,8 @@ angular.module('teams.players', [
         playersListCtrl.getCurrentTeamName = TeamsModel.getCurrentTeamName;
 
         console.log( "getCurrentTeam ",  playersListCtrl.getCurrentTeam);
+        console.log( playersListCtrl );
+        console.log( PlayersModel );
     });
 
 
