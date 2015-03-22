@@ -30,7 +30,6 @@ angular.module('lcsStalker.models.teams', [
         }
 
         model.getCurrentTeam = function() {
-            console.log("currentTeam", currentTeam);
             return currentTeam;
         }
 

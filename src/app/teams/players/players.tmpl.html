@@ -1,8 +1,5 @@
 
-<h1>Team name - {{playersListCtrl.getCurrentTeamName}}</h1>
-<h1>Team name - {{playersListCtrl.getCurrentTeam}}</h1>
-<h1>Team name - {{playersListCtrl.getCurrentTeamName}}</h1>
-<h1>Team name - {{playersListCtrl.getCurrentTeamName}}</h1>
+<h1>Team: {{playersListCtrl.getCurrentTeamName()}}</h1>
 
 <table
     ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.getCurrentTeamName"
