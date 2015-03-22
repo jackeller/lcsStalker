@@ -46,9 +46,9 @@ angular.module('teams.players', [
                     }
 
                     if (player.twitchStatus == "Online") {
-                        // console.warn( player.name + " is " + player.twitchStatus );
+                        console.warn( player.name + " is " + player.twitchStatus );
                     } else {
-                        // console.log( player.name + " is " + player.twitchStatus);
+                        console.log( player.name + " is " + player.twitchStatus);
                     }
 
                 });
@@ -57,16 +57,11 @@ angular.module('teams.players', [
         PlayersModel.getPlayers()
             .then(function(players) {
                 playersListCtrl.players = players;
-
-                console.log("players", players);
             });
 
         playersListCtrl.getCurrentTeam = TeamsModel.getCurrentTeam;
         playersListCtrl.getCurrentTeamName = TeamsModel.getCurrentTeamName;
 
-        console.log( "getCurrentTeam ",  playersListCtrl.getCurrentTeam);
-        console.log( playersListCtrl );
-        console.log( PlayersModel );
     });
 
 
