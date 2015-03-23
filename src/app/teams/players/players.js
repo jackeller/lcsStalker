@@ -29,7 +29,7 @@ angular.module('teams.players', [
 
         console.log( "statepaprams team is ",  $stateParams.team);
 
-        // <iframe src="http://www.twitch.tv/imaqtpie/embed" frameborder="0" scrolling="no" height="378" width="620"></iframe><a href="http://www.twitch.tv/imaqtpie?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Watch live video from imaqtpie on www.twitch.tv</a>
+        // <iframe src="http://www.twitch.tv/imaqtpie/embed" frameborder="0" scrolling="no" height="200" width="300"></iframe><a href="http://www.twitch.tv/imaqtpie?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Watch live video from imaqtpie on www.twitch.tv</a>
 
         playersListCtrl.trustURL = function (twitchID) {
           return $sce.trustAsResourceUrl('http://www.twitch.tv/' + twitchID + "/embed");
@@ -71,7 +71,7 @@ angular.module('teams.players', [
 
     })
 
-    .directive('twitchIframe', ['', function(){
+    .directive('twitchIframe', function(){
         // Runs during compile
         return {
             // name: '',
@@ -81,16 +81,17 @@ angular.module('teams.players', [
             // controller: function($scope, $element, $attrs, $transclude) {},
             // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
             // restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-            // template: '',
+            template: '<div>foo</div>',
             // templateUrl: '',
             // replace: true,
             // transclude: true,
             // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
             link: function($scope, iElm, iAttrs, controller) {
                 console.warn("twitch iframe directive");
+
             }
         };
-    }])
+    })
 ;
 
 
