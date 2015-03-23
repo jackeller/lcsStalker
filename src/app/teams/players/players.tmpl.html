@@ -33,6 +33,19 @@
     </tr>
 
     <tr>
+        <td>Twitch Embed</td>
+        <td>
+            <iframe
+                ng-src="playersListCtrl.trustURL( {{player.twitchEmbed}} )"
+                frameborder="0"
+                scrolling="no"
+                height="378"
+                width="620">
+            </iframe>
+        </td>
+    </tr>
+
+    <tr>
         <td><a href ng-click="setEditingPlayer(player); startEditing();">Edit</a></td>
         <td><a href ng-click="deletePlayer(player);">Delete</a></td>
     </tr>
