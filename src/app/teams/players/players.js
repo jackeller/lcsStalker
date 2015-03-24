@@ -81,7 +81,7 @@ angular.module('teams.players', [
             // controller: function($scope, $element, $attrs, $transclude) {},
             // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
             // restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-            template: '<div>foo</div>',
+            template: '<div>foo {{player.name}}</div>',
             // templateUrl: '',
             // replace: true,
             // transclude: true,
