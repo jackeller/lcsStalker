@@ -1,61 +1,43 @@
 
 <h1>Team - {{playersListCtrl.getCurrentTeamName()}}</h1>
 
-<table
-    ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.getCurrentTeamName()"
-    ng-class="{'active': isSelectedPlayer(player.id)}">
+<table>
 
-    <tr>
+    <tr class='header'>
         <td>Name</td>
-        <td>{{player.name}}</td>
-    </tr>
-
-    <tr>
         <td>Team</td>
-        <td>{{player.team}}</td>
-    </tr>
-
-    <tr>
-        <td>Twitch</td>
-        <td>{{player.twitch}} -
-            <a
-                href
-                ng-click="playersListCtrl.getTwitchOnlineStatus( player )"
-                ng-init="playersListCtrl.getTwitchOnlineStatus( player )">
-                    {{player.twitch}}
-            </a>
-        </td>
-    </tr>
-
-    <tr>
+        <td>Twitch ID</td>
         <td>Twitch Status</td>
-        <td>{{player.twitchStatus}}</td>
-    </tr>
-
-    <tr>
         <td>Twitch Embed</td>
-        <td>
-            <!-- <iframe
-                ng-src="{{ playersListCtrl.trustURL( player.twitchEmbed ) }} "
-                frameborder="0"
-                scrolling="no"
-                height="378"
-                width="620">
-            </iframe> -->
-        </td>
+        <td>Edit / Delete</td>
     </tr>
 
-    <tr>
-        <td>Twitch Embed Using Directive</td>
-        <td>
-            <twitch-iframe></twitch-iframe>
-        </td>
+    <tr
+        ng-repeat="player in playersListCtrl.players | filter: team = playersListCtrl.getCurrentTeamName()"
+        ng-class="{'active': isSelectedPlayer(player.id)}">
+            <td>{{player.name}}</td>
+
+            <td>{{player.team}}</td>
+
+            <td>
+                <a
+                    href
+                    ng-click="playersListCtrl.getTwitchOnlineStatus( player )"
+                    ng-init="playersListCtrl.getTwitchOnlineStatus( player )">
+                        {{player.twitch}}
+                </a>
+            </td>
+
+            <td>{{player.twitchStatus}}</td>
+
+            <td>
+                <twitch-iframe></twitch-iframe>
+            </td>
+
+            <td><a href ng-click="setEditingPlayer(player); startEditing();">Edit</a>
+                <a href ng-click="deletePlayer(player);">Delete</a></td>
     </tr>
 
-    <tr>
-        <td><a href ng-click="setEditingPlayer(player); startEditing();">Edit</a></td>
-        <td><a href ng-click="deletePlayer(player);">Delete</a></td>
-    </tr>
 </table>
 
 <ui-view ng-if="shouldShowCreating()">

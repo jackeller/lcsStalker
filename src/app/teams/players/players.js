@@ -89,9 +89,9 @@ angular.module('teams.players', [
             link: function($scope, iElm, iAttrs, controller) {
                 console.warn("twitch iframe directive");
 
-                if ( $scope.player.twitch == "riotgames" ) {
-                    $scope.player.foo = "raaaaa";
-                }
+                // if ( $scope.player.twitch == "riotgames" ) {
+                //     $scope.player.foo = "raaaaa";
+                // }
 
             }
         };
