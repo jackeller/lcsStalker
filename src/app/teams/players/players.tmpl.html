@@ -34,12 +34,15 @@
                 <twitch-iframe></twitch-iframe>
             </td>
 
-            <td><a href ng-click="setEditingPlayer(player); startEditing();">Edit</a>
+            <td><a href ui-sref="default.teams.players.edit({playerId:player.id})" ng-click="setEditingPlayer(player); startEditing();">Edit</a>
                 <a href ng-click="deletePlayer(player);">Delete</a></td>
     </tr>
 
 </table>
 
-<ui-view ng-if="shouldShowCreating()">
-    <a href ng-click="startCreating()">Create Player</a>
+<ui-view ng-if="playersListCtrl.getCurrentCategory()">
+    <a href
+        ui-sref="default.teams.players.create">
+        Create Player
+    </a>
 </ui-view>

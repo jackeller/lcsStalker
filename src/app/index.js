@@ -10,12 +10,11 @@ angular.module('lcsStalker', [
         'teams',
         'teams.players'
     ])
-        .config(function ($stateProvider, $urlRouterProvider) {
-          $stateProvider
-              .state('default', {
-                  url: '',
-                  abstract: true
-              })
-          ;
-          $urlRouterProvider.otherwise('/');
+    .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('default', {
+                url: '',
+                abstract: true
+            });
+        $urlRouterProvider.otherwise('/');
     });

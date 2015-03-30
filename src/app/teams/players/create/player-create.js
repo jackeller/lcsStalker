@@ -6,7 +6,7 @@
 angular.module('teams.players.create', [
 
     ])
-        .config(['$stateProvider',function($stateProvider) {
+        .config(['$stateProvider', function($stateProvider) {
             $stateProvider
                 .state('default.teams.players.create', {
                     url: '/players/create',
