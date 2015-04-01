@@ -1,60 +1,75 @@
 [{
+    "id": 1,
     "name": "Marcus 'Dyrus' Hill",
     "team": "TSM",
     "twitch": "tsm_dyrus"
 }, {
+    "id": 2,
     "name": "Søren 'Bjergsen' Bjerg",
     "team": "TSM",
     "twitch": "tsm_bjergsen"
 }, {
+    "id": 3,
     "name": "Lucas 'Santorin' Larsen",
     "team": "TSM",
     "twitch": "tsm_santorin"
 }, {
+    "id": 4,
     "name": "Jason 'WildTurtle' Tran",
     "team": "TSM",
     "twitch": "tsm_wildturtle"
 }, {
+    "id": 5,
     "name": "Jang-sik 'Lustboy' Ham",
     "team": "TSM",
     "twitch": "lustboy"
 }, {
+    "id": 6,
     "name": "Darshan 'Zion Spartan' Upadhyaya",
     "team": "CLG",
     "twitch": "zionspartan"
 },{
+    "id": 7,
     "name": "Wings Of Death - not really a CLG member",
     "team": "CLG",
     "twitch": "wingsofdeath"
 },{
+    "id": 8,
     "name": "Trick2g - not really a CLG member",
     "team": "CLG",
     "twitch": "trick2g"
 },{
+    "id": 9,
     "name": "RiotGames - not really a CLG member",
     "team": "CLG",
     "twitch": "riotgames"
 }, {
+    "id": 10,
     "name": "Alan 'KiWiKiD' Nguyen",
     "team": "DIG",
     "twitch": "kiwikid"
 }, {
+    "id": 11,
     "name": "An 'Balls' Le",
     "team": "C9",
     "twitch": "manballs"
 }, {
+    "id": 12,
     "name": "Will 'Meteos' Hartman",
     "team": "C9",
     "twitch": "meteos"
 }, {
+    "id": 13,
     "name": "Hai 'Hai' Lam",
     "team": "C9",
     "twitch": "hail9"
 }, {
+    "id": 14,
     "name": "Zachary 'Sneaky' Scuderi",
     "team": "C9",
     "twitch": "sneakycastroo"
 }, {
+    "id": 15,
     "name": "Daerek 'LemonNation' Hart",
     "team": "C9",
     "twitch": "lemination"
